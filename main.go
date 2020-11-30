@@ -42,10 +42,10 @@ func ReadImage() (image.Image, int) {
 
 func ResizeImage(img image.Image, width int) (image.Image, int, int) {
 	size := img.Bounds()
-	heigth := (size.Max.Y * width * 10) / (size.Max.X * 16)
-	img = resize.Resize(uint(width), uint(heigth), img, resize.Lanczos2)
+	height := (size.Max.Y * width * 10) / (size.Max.X * 16)
+	img = resize.Resize(uint(width), uint(height), img, resize.Lanczos2)
 
-	return img, width, heigth
+	return img, width, height
 }
 
 func Convert(img image.Image, w int, h int) []byte {
